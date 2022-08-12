@@ -38,15 +38,4 @@ public class ControlFlow {
     File file = new File("src/main/java");
     javaFile.writeTo(file);
   }
-
-  private MethodSpec computeRange(String name, int from, int to, String op) {
-    return MethodSpec.methodBuilder(name)
-        .returns(int.class)
-        .addStatement("int result = 1")
-        .beginControlFlow("for (int i = " + from + "; i < " + to + "; i++)")
-        .addStatement("result = result " + op + " i")
-        .endControlFlow()
-        .addStatement("return result")
-        .build();
-  }
 }
