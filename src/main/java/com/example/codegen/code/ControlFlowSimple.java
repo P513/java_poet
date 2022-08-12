@@ -8,7 +8,8 @@ import javax.lang.model.element.Modifier;
 import java.io.File;
 import java.io.IOException;
 
-public class ControlFlow {
+// ControlFlow로 조건문 코드젠
+public class ControlFlowSimple {
   public static void main(String[] args) throws IOException {
     MethodSpec main = MethodSpec.methodBuilder("main")
         .addStatement("int total = 0")
@@ -27,12 +28,12 @@ public class ControlFlow {
         .build();
      */
 
-    TypeSpec controlFlowCodegen = TypeSpec.classBuilder("ControlFlowCodegen")
+    TypeSpec controlFlowSimple = TypeSpec.classBuilder("ControlFlowSimpleCodegen")
         .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
         .addMethod(main)
         .build();
 
-    JavaFile javaFile = JavaFile.builder("com.example.codegen.gen", controlFlowCodegen)
+    JavaFile javaFile = JavaFile.builder("com.example.codegen.gen", controlFlowSimple)
         .build();
 
     File file = new File("src/main/java");

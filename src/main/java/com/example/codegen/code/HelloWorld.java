@@ -8,6 +8,7 @@ import javax.lang.model.element.Modifier;
 import java.io.File;
 import java.io.IOException;
 
+// HelloWorld를 출력하는 코드젠
 public class HelloWorld {
   public static void main(String[] args) throws IOException {
     MethodSpec main = MethodSpec.methodBuilder("main")
