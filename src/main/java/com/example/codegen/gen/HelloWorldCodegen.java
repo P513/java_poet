@@ -1,4 +1,4 @@
-package com.example.codegen/codegen;
+package com.example.codegen.gen;
 
 import java.lang.String;
 import java.lang.System;

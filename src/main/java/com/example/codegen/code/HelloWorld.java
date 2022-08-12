@@ -22,7 +22,7 @@ public class HelloWorld {
         .addMethod(main)
         .build();
 
-    JavaFile javaFile = JavaFile.builder("com.example.codegen/codegen", helloWorldCodegen)
+    JavaFile javaFile = JavaFile.builder("com.example.codegen.gen", helloWorldCodegen)
         .build();
 
     File file = new File("src/main/java");
